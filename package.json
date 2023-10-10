@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node index.js",
     "build": "next build",
-    "start": "node index.js"
+    "start": "node index.js",
+    "export": "next export"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
