@@ -10,6 +10,7 @@ const publicRuntimeConfig = {
         : 'none',
 };
 
+
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
 let assetPrefix = ''
@@ -26,6 +27,11 @@ module.exports = {
   assetPrefix: assetPrefix,
   basePath: basePath,
 }
+
+const nextConfig = {
+  output: 'export',
+};
+
 //
 // module.exports = withCSS(withImages({
 //     localeSubpaths: typeof process.env.LOCALE_SUBPATHS === 'string'
@@ -46,5 +52,6 @@ module.exports = {
 module.exports = withPlugins([
     [withCSS],
     [withImages],
-    [withFonts]
+    [withFonts],
+    [nextConfig]
 ]);
