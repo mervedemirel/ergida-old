@@ -9,6 +9,23 @@ const publicRuntimeConfig = {
         ? process.env.LOCALE_SUBPATHS
         : 'none',
 };
+
+const isGithubActions = process.env.GITHUB_ACTIONS || false
+
+let assetPrefix = ''
+let basePath = '/'
+
+if (isGithubActions) {
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
+
+  assetPrefix = `/${ergida-old}/`
+  basePath = `/${ergida-old}`
+}
+
+module.exports = {
+  assetPrefix: assetPrefix,
+  basePath: basePath,
+}
 //
 // module.exports = withCSS(withImages({
 //     localeSubpaths: typeof process.env.LOCALE_SUBPATHS === 'string'
