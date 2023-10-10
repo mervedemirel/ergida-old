@@ -11,8 +11,9 @@ const publicRuntimeConfig = {
 };
 
 const nextConfig = {
-    output: 'export',
-  };
+  output: 'export',
+};
+
 //
 // module.exports = withCSS(withImages({
 //     localeSubpaths: typeof process.env.LOCALE_SUBPATHS === 'string'
