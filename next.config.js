@@ -9,6 +9,9 @@ const publicRuntimeConfig = {
         ? process.env.LOCALE_SUBPATHS
         : 'none',
 };
+const nextConfig = {
+  output: 'export',
+};
 //
 // module.exports = withCSS(withImages({
 //     localeSubpaths: typeof process.env.LOCALE_SUBPATHS === 'string'
@@ -29,5 +32,6 @@ const publicRuntimeConfig = {
 module.exports = withPlugins([
     [withCSS],
     [withImages],
-    [withFonts]
+    [withFonts],
+    [nextConfig]
 ]);
