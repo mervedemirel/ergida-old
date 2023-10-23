@@ -10,9 +10,6 @@ const publicRuntimeConfig = {
         : 'none',
 };
 
-const nextConfig = {
-  output: 'export',
-};
 
 //
 // module.exports = withCSS(withImages({
@@ -34,6 +31,5 @@ const nextConfig = {
 module.exports = withPlugins([
     [withCSS],
     [withImages],
-    [withFonts],
-    [nextConfig]
+    [withFonts]
 ]);

@@ -1,9 +1,9 @@
-import Document, {Head, Main, NextScript} from "next/document";
+import Document, {Html, Head, Main, NextScript} from "next/document";
 
 class ErgidaDocument extends Document {
     render() {
         return (
-            <html lang="tr">
+            <Html lang="tr">
             <Head>
                 <meta charSet="UTF-8"/>
                 <meta name="viewport"
@@ -27,7 +27,7 @@ class ErgidaDocument extends Document {
             <Main/>
             <NextScript/>
             </body>
-            </html>
+            </Html>
         )
     }
 }
